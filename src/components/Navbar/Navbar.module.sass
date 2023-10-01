@@ -1,37 +1,42 @@
 @import src/sass/vars
 
 .navbar_container
-    display: flex
-    justify-content: space-between
-    align-items: center
-    height: 80px
-    padding: 10px
+    display: grid
+    grid-template-columns: 260px repeat(3,1fr)
+    grid-template-rows: auto
+    grid-template-areas: "logo search search search"
+    padding: 10px 60px
     background-color: $color-primary-yellow
+    width: 100%
 .navbar_logo
     order: 1
-    width: 20%
-    &_img
-        height: 40px
+    padding: 0px 0px 0px 180px
+    grid-area: logo
+    &_img img
+        width: 60px
 .navbar_search
     order: 2
-    width: 80%
+    width: 76%
+    grid-area: search
     &_group
         display: flex
         align-items: center
         width: 100%
         flex: 5 0px
+        background-color: $color-secondary-gray-light
+        border-radius: 2px
         &_input
-            width: 80%
-            padding: 8px
+            width: 98%
+            height: 26px
             border: none
-            border-radius: 4px 0px 0px 4px
+            border-radius: 2px 0 0 2px
             margin-right: 0px
-           
+            padding: 9px 18px;
         &_icon
             cursor: pointer;
-            background-color: $color-secondary-gray-light
-            padding: 8px
-            border-radius: 0px 4px 4px 0px
+            height: 100%
+            font-size: $font-size-xl
+            padding: 0 16px
             color: $color-secondary-gray-dark
     
         

@@ -1,14 +1,29 @@
 html
-    
-
+    max-width: 100vw
+    overflow: hidden
 body
+    font-family: $font-primary
+    background-color: $color-secondary-gray-thin
     margin: 0
-    
-header
-    
+input
+    font-size: $font-size-m
 input:hover
     outline: none
 input:focus
     outline: none
 input:active
     outline: none
+input::placeholder
+    color: $color-secondary-gray-dark
+ol
+    font-size: $font-size-s
+    padding-inline-start: 0
+    list-style: none
+    margin: 0
+a
+    text-decoration: none
+    color: inherit
+img
+    overflow-clip-margin: content-box
+    overflow: clip
+
