@@ -1,0 +1,35 @@
+@import src/sass/vars
+@import src/sass/components/text
+@import src/sass/components/button
+
+.product_detail
+    border-radius: 4px
+    padding: 30px
+    background-color: $color-primary-white
+    display: grid
+    grid-template-columns: 1fr 220px
+    grid-template-rows: auto auto
+    grid-template-areas: "product-img product-price" "product-description product-description"
+    column-gap: 24px
+    &_img
+        grid-area: product-img
+        & img
+             width:70%
+             height: 500px
+             object-fit: contain
+             object-position: center
+             box-sizing: content-box
+    &_price
+        grid-area: product-price
+        &_tag
+            @extend .text-tag-small
+        &_mount
+           @extend .text-tag-big-semibold
+        &_button
+            width: 100%
+            margin-top: 54px
+            @extend .button-primary
+    &_description
+        grid-area: product-description
+        & p
+            color: $color-secondary-gray-dark

@@ -1,19 +1,27 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Container from './components/Container/Container';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SearchBoxPage from './pages/SearchBoxPage';
+import ResultSearchPage from './pages/ResultSearchPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import './sass/styles.sass';
-import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs';
-import ProductList from './components/ProductList/ProductList';
 
 function App() {
   return (
-    <React.Fragment>
-      <Header />
-      <Container>
-        <Breadcrumbs />
-        <ProductList />
-      </Container>
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SearchBoxPage />} />
+        <Route
+          path="/items"
+          query={(search) => {
+            return {
+              search,
+            };
+          }}
+          element={<ResultSearchPage />}
+        />
+        <Route path="/items/:id" element={<ProductDetailPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

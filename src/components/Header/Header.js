@@ -1,9 +1,10 @@
 import React from 'react';
 import Navbar from '../Navbar/Navbar';
+import styles from './Header.module.sass';
 
 const Header = () => {
   return (
-    <header>
+    <header className={styles.header}>
       <Navbar />
     </header>
   );

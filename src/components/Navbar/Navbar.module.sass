@@ -2,27 +2,26 @@
 
 .navbar_container
     display: grid
-    grid-template-columns: 260px repeat(3,1fr)
+    grid-template-columns: 60px repeat(3,1fr)
     grid-template-rows: auto
-    grid-template-areas: "logo search search search"
-    padding: 10px 60px
+    column-gap: 24px
+    grid-template-areas: "navbar-logo navbar-search navbar-search navbar-search"
     background-color: $color-primary-yellow
     width: 100%
 .navbar_logo
     order: 1
-    padding: 0px 0px 0px 180px
-    grid-area: logo
+    text-align: right
+    grid-area: navbar-logo
     &_img img
         width: 60px
 .navbar_search
     order: 2
-    width: 76%
-    grid-area: search
+    width: 100%
+    grid-area: navbar-search
     &_group
         display: flex
         align-items: center
         width: 100%
-        flex: 5 0px
         background-color: $color-secondary-gray-light
         border-radius: 2px
         &_input
@@ -31,11 +30,11 @@
             border: none
             border-radius: 2px 0 0 2px
             margin-right: 0px
-            padding: 9px 18px;
+            padding: 9px 18px
         &_icon
-            cursor: pointer;
+            cursor: pointer
             height: 100%
-            font-size: $font-size-xl
+            font-size: $font-size-l
             padding: 0 16px
             color: $color-secondary-gray-dark
     
