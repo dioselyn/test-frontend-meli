@@ -1,0 +1,45 @@
+@import src/sass/vars
+
+.product_list
+    background-color: $color-primary-white
+    border-radius: 4px
+    &_item
+        display: flex
+        flex-direction: row
+        padding: 20px
+        border-bottom: 1px solid $color-secondary-gray-light
+        &_img
+            object-fit: contain
+            object-position: center
+            border-radius: 4px
+            box-sizing: content-box
+            flex-shrink: 0
+            height: 220px
+            width: 160px
+            margin: 0
+            overflow: hidden
+            padding: 0 24px
+        &_detail
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 100%
+            padding:20px
+            &_content
+                padding-top: 26px
+                width: 60%
+                &_price
+                    font-size: 22px
+                    font-weight: 500
+            &_condition
+                display: flex
+                align-items: flex-start
+                padding-top: 32px
+                color: $color-secondary-gray-dark
+                text-transform: capitalize
+
+
+        
+           
+
+           

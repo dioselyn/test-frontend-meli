@@ -1,0 +1,47 @@
+@import src/sass/vars
+
+.navbar_container
+    display: grid
+    grid-template-columns: 60px repeat(3,1fr)
+    grid-template-rows: auto
+    column-gap: 24px
+    grid-template-areas: "navbar-logo navbar-search navbar-search navbar-search"
+    background-color: $color-primary-yellow
+    width: 100%
+.navbar_logo
+    order: 1
+    text-align: right
+    grid-area: navbar-logo
+    &_img img
+        width: 60px
+.navbar_search
+    order: 2
+    width: 100%
+    grid-area: navbar-search
+    &_group
+        display: flex
+        align-items: center
+        width: 100%
+        background-color: $color-secondary-gray-light
+        border-radius: 2px
+        &_input
+            width: 98%
+            height: 26px
+            border: none
+            border-radius: 2px 0 0 2px
+            margin-right: 0px
+            padding: 9px 18px
+        & button
+            border: none
+            background-color: transparent
+            cursor: pointer
+        &_icon
+            height: 100%
+            font-size: $font-size-l
+            padding: 0 16px
+            color: $color-secondary-gray-dark
+            
+    
+        
+        
+
