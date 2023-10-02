@@ -128,13 +128,10 @@ const useProducts = () => {
             ? data['filters']
             : data['available_filters'];
 
-        const categories = filter
-          .filter((item) => item?.id === 'category')[0]
-          .values.sort((a, b) => b?.results - a?.results)
-          .slice(0, 5);
+        const categories = filter.filter((item) => item?.id === 'category')[0];
 
         setCategoryProduct(
-          categories[0]?.path_from_root.map((item) => item.name)
+          categories.values[0]?.path_from_root.map((item) => item.name)
         );
       })
       .catch((error) => setError(error));
