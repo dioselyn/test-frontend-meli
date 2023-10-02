@@ -11,8 +11,8 @@ const Breadcrumbs = ({ breadcrumbs }) => {
             <a href="/" aria-label={breadcrumb}>
               {breadcrumb}
             </a>
-            <span>
-              <AiOutlineRight className={styles.breadcrumbs_list_icon} />
+            <span className={styles.breadcrumbs_list_icon}>
+              <AiOutlineRight />
             </span>
           </li>
         ))}
