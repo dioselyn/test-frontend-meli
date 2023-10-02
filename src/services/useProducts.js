@@ -128,11 +128,20 @@ const useProducts = () => {
             ? data['filters']
             : data['available_filters'];
 
-        const categories = filter.filter((item) => item?.id === 'category')[0];
+        const valuesCategories = filter.filter(
+          (item) => item?.id === 'category'
+        )[0];
 
-        setCategoryProduct(
-          categories.values[0]?.path_from_root.map((item) => item.name)
-        );
+        const categories =
+          valuesCategories?.values?.length > 0
+            ? valuesCategories?.values[0]?.path_from_root
+              ? valuesCategories?.values[0]?.path_from_root.map(
+                  (item) => item.name
+                )
+              : valuesCategories?.values.map((item) => item.name)
+            : valuesCategories?.values?.map((item) => item?.name);
+
+        setCategoryProduct(categories);
       })
       .catch((error) => setError(error));
   };

@@ -21,7 +21,9 @@ const ProductDetailPage = () => {
   }, [id]);
 
   useEffect(() => {
-    getCategoryProduct(resultProductById.item?.title);
+    if (resultProductById.item?.title) {
+      getCategoryProduct(resultProductById.item.title);
+    }
   }, [resultProductById]);
 
   return (
