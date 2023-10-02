@@ -4,27 +4,33 @@
 
 .product_detail
     border-radius: 4px
-    padding: 30px
+    padding: 60px 80px
     background-color: $color-primary-white
     display: grid
-    grid-template-columns: 1fr 220px
+    grid-template-columns: 1fr 300px
     grid-template-rows: auto auto
     grid-template-areas: "product-img product-price" "product-description product-description"
-    column-gap: 24px
+    column-gap: 4px
     &_img
         grid-area: product-img
+        text-align: center
         & img
-             width:70%
-             height: 500px
+             width:460px
+             height: 600px
              object-fit: contain
              object-position: center
              box-sizing: content-box
     &_price
         grid-area: product-price
         &_tag
+            text-transform: capitalize
             @extend .text-tag-small
         &_mount
+           position: relative
            @extend .text-tag-big-semibold
+           & span
+             font-size: $font-size-lg
+             position: absolute
         &_button
             width: 100%
             margin-top: 54px
@@ -33,3 +39,7 @@
         grid-area: product-description
         & p
             color: $color-secondary-gray-dark
+            word-break: break-word
+        & li
+            color: $color-secondary-gray-dark
+            word-break: break-word
