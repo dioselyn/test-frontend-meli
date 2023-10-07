@@ -3,6 +3,7 @@
   "author": "Dioselyn Colina",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dioselyn.github.io/test-frontend-meli",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
