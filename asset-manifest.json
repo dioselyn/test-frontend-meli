@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-frontend-meli/static/css/main.71f1fed4.css",
+    "main.js": "/test-frontend-meli/static/js/main.35ff6b01.js",
+    "index.html": "/test-frontend-meli/index.html",
+    "main.71f1fed4.css.map": "/test-frontend-meli/static/css/main.71f1fed4.css.map",
+    "main.35ff6b01.js.map": "/test-frontend-meli/static/js/main.35ff6b01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71f1fed4.css",
+    "static/js/main.35ff6b01.js"
+  ]
+}
